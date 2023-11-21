@@ -37,4 +37,18 @@ public class CustomAuthenticationFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response); // only when authentication worked
         }
     }
+
+
+//    @Override
+//    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+//        // Extract the "key" header from the request
+//        String apiKey = request.getHeader("key");
+//
+//        // Check if the "key" header matches the expected value ("secret")
+//        if ("secret".equals(apiKey)) {
+//            filterChain.doFilter(request, response); // Continue with the request
+//        } else {
+//            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//        }
+//    }
 }
