@@ -1,13 +1,12 @@
-package net.javaguides.springboot.config.security.filters;
+package net.javaguides.springboot.config.custom_security_filter.filters;
 
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
-import net.javaguides.springboot.config.security.authentication.CustomAuthentication;
-import net.javaguides.springboot.config.security.managers.CustomAuthenticationManager;
+import net.javaguides.springboot.config.custom_security_filter.authentication.CustomAuthentication;
+import net.javaguides.springboot.config.custom_security_filter.managers.CustomAuthenticationManager;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import jakarta.servlet.*;

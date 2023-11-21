@@ -1,13 +1,12 @@
-package net.javaguides.springboot.config.security.managers;
+package net.javaguides.springboot.config.custom_security_filter.managers;
 
 
 import lombok.AllArgsConstructor;
-import net.javaguides.springboot.config.security.providers.CustomAuthenticationProvider;
+import net.javaguides.springboot.config.custom_security_filter.providers.CustomAuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.stereotype.Component;
 
 //@Component
 @AllArgsConstructor

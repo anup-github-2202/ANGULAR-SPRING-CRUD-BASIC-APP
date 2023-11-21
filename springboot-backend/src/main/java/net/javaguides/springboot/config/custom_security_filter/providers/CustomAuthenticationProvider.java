@@ -1,13 +1,12 @@
-package net.javaguides.springboot.config.security.providers;
+package net.javaguides.springboot.config.custom_security_filter.providers;
 
 
-import net.javaguides.springboot.config.security.authentication.CustomAuthentication;
+import net.javaguides.springboot.config.custom_security_filter.authentication.CustomAuthentication;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.stereotype.Component;
 
 //@Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {

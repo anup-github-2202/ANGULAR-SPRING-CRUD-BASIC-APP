@@ -1,30 +1,31 @@
-package net.javaguides.springboot.config.security.authentication;
+package net.javaguides.springboot.config.multiple_security_filters.authentication;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.security.auth.Subject;
 import java.util.Collection;
 
-@AllArgsConstructor
-@Setter
-@Getter
-public class CustomAuthentication implements Authentication {
+@RequiredArgsConstructor
+public class ApiKeyAuthentication implements Authentication {
 
-    private final boolean authentication;
     private final String key;
+    private boolean authenticated;
 
     @Override
     public boolean isAuthenticated() {
-        return authentication;
+        return authenticated;
     }
 
     @Override
-    public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
+    public void setAuthenticated(boolean authenticated) throws IllegalArgumentException {
+        this.authenticated = authenticated;
+    }
 
+    public String getKey() {
+        return key;
     }
 
     @Override
