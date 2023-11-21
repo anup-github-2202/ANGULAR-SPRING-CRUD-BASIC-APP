@@ -7,14 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/demo")
-public class DemoController {
+@RequestMapping("/demo")
+public class SecurityController {
 
     @GetMapping("/hello")
     public String hello() {
 
         var authenticatedObject = SecurityContextHolder.getContext().getAuthentication();
         return "Hello!";
+    }
+
+    @GetMapping("/hi")
+    public String hello1() {
+
+        var authenticatedObject = SecurityContextHolder.getContext().getAuthentication();
+        return "Hi!";
     }
 
     @PreAuthorize("hasAuthority('read-1')")

@@ -3,7 +3,7 @@ package net.javaguides.springboot.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity

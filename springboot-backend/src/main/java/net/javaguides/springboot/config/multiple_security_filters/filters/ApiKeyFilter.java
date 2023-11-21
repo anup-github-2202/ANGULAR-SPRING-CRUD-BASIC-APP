@@ -1,15 +1,18 @@
 package net.javaguides.springboot.config.multiple_security_filters.filters;
 
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+//import jakarta.servlet.FilterChain;
+//import jakarta.servlet.ServletException;
+//import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.*;//http.HttpServletResponse;
+import javax.servlet.http.*;
+
 import lombok.AllArgsConstructor;
 import net.javaguides.springboot.config.multiple_security_filters.authentication.ApiKeyAuthentication;
 import net.javaguides.springboot.config.multiple_security_filters.managers.CustomAuthenticationManager;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
+
 import java.io.IOException;
 
 @AllArgsConstructor

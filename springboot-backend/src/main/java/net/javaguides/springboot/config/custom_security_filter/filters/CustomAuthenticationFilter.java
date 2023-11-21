@@ -1,15 +1,15 @@
 package net.javaguides.springboot.config.custom_security_filter.filters;
 
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import net.javaguides.springboot.config.custom_security_filter.authentication.CustomAuthentication;
 import net.javaguides.springboot.config.custom_security_filter.managers.CustomAuthenticationManager;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import jakarta.servlet.*;
+import javax.servlet.*;
 import java.io.IOException;
 
 //@Component
